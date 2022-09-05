@@ -38,7 +38,7 @@ Reference:
 	* Figure_3(a).pdf			:   Figure 3(a)
 	* Figure_3(b).pdf			:   Figure 3(b)
 
-+ **Math**       :   folder containing Mathematica notebooks
++ **M**       :   folder containing Mathematica notebooks
 
 	* analytics.nb        :   notebook with the analytical derivations used in the R scripts
 
