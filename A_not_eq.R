@@ -299,12 +299,13 @@ ggplot(data = A_by_W_a_dt) +
 
 dev.off()
 
-#compiling the tikz into a pdf and displaying
+#compiling the tikz into a pdf and displaying ***the compiler path needs to be set by the user***
 if (!file.exists(paste0(tmptikz, "___LOCK"))) {
-    setwd(here("fig/"))
-    tools::texi2pdf(paste0(here("tikz/"), "/", plotname, ".tex"), clean = T)
-    Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
-    embed_fonts(paste0(here("fig/"), "/", plotname, ".pdf"))
+  #set the compiler path
+  Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
+  setwd(here("fig/"))
+  tools::texi2pdf(paste0(here("tikz/"), "/", plotname, ".tex"), clean = T)
+  embed_fonts(paste0(here("fig/"), "/", plotname, ".pdf"))
     system(paste(
         getOption("pdfviewer"),
         paste0(here("fig/"), "/", plotname, ".pdf")

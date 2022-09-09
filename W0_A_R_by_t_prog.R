@@ -472,11 +472,12 @@ ggplot(data = var_by_t_tot_dt, aes(x = c0, y = R)) +
 
 dev.off()
 
-#compiling the tikz into a pdf and displaying
+#compiling the tikz into a pdf and displaying ***the compiler path needs to be set by the user***
 if (!file.exists(paste0(tmptikz, "___LOCK"))) {
+  #set the compiler path
+  Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
   setwd(here("fig/"))
   tools::texi2pdf(paste0(here("tikz/"), "/", plotname, ".tex"), clean = T)
-  Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
   embed_fonts(paste0(here("fig/"), "/", plotname, ".pdf"))
   system(paste(getOption("pdfviewer"), paste0(here("fig/"), "/", plotname, ".pdf")))
   tmptikz_err <- setdiff(tmptikz_err, plotname)
@@ -598,11 +599,12 @@ ggplot(data = var_by_t_tot_dt, aes(x = c0, y = GW0)) +
 
 dev.off()
 
-#compiling the tikz into a pdf and displaying
+#compiling the tikz into a pdf and displaying ***the compiler path needs to be set by the user***
 if (!file.exists(paste0(tmptikz, "___LOCK"))) {
+  #set the compiler path
+  Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
   setwd(here("fig/"))
   tools::texi2pdf(paste0(here("tikz/"), "/", plotname, ".tex"), clean = T)
-  Sys.setenv(R_GSCMD = "C:/Program Files/gs/gs9.21/bin/gswin64c.exe")
   embed_fonts(paste0(here("fig/"), "/", plotname, ".pdf"))
   system(paste(getOption("pdfviewer"), paste0(here("fig/"), "/", plotname, ".pdf")))
   tmptikz_err <- setdiff(tmptikz_err, plotname)
