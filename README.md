@@ -10,7 +10,7 @@ Jiao Li, Duccio Gamannossi degl'Innocenti and Matthew D. Rablen
 
 Reference:
 
-[Li, J., Gamannossi degl'Innocenti, D. and Rablen, M.D., 2021. Marketed Tax Avoidance Schemes: An Economic Analysis](http://www.dgdi.me/publication/avoid_market/)
+[Li, J., Gamannossi degl'Innocenti, D. and Rablen, M.D., 2021. Marketed Tax Avoidance Schemes: An Economic Analysis, *forthcoming* at the Scandinavian Journal of Economics](http://www.dgdi.me/publication/avoid_market/)
 
 ### Description of files in the Repo
 
